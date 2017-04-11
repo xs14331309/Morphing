@@ -1,7 +1,9 @@
 #include <iostream>
 #include <stdlib.h>
+#include <math.h>
+#include <string.h>
 
-#define MYDIM 3    //²âÊÔ¾ØÕóÎ¬Êı¶¨Òå
+#define MYDIM 3    //æµ‹è¯•çŸ©é˜µç»´æ•°å®šä¹‰
 
 extern double** getAMatrix(int row, int col) {
 	double **matrix = new double*[col];
@@ -59,7 +61,7 @@ extern double getA(double** arcs, int n) {
 	return ans;
 }
 
-//¼ÆËãÃ¿Ò»ĞĞÃ¿Ò»ÁĞµÄÃ¿¸öÔªËØËù¶ÔÓ¦µÄÓà×ÓÊ½£¬×é³ÉA*
+//è®¡ç®—æ¯ä¸€è¡Œæ¯ä¸€åˆ—çš„æ¯ä¸ªå…ƒç´ æ‰€å¯¹åº”çš„ä½™å­å¼ï¼Œç»„æˆA*
 extern void getAStart(double** arcs, int n, double** ans) {
 	if (n == 1) {
 		ans[0][0] = 1;
@@ -76,7 +78,7 @@ extern void getAStart(double** arcs, int n, double** ans) {
 			}
 
 
-			ans[j][i] = getA(temp, n - 1);  //´Ë´¦Ë³±ã½øĞĞÁË×ªÖÃ
+			ans[j][i] = getA(temp, n - 1);  //æ­¤å¤„é¡ºä¾¿è¿›è¡Œäº†è½¬ç½®
 			if ((i + j) % 2 == 1) {
 				ans[j][i] = -ans[j][i];
 			}
@@ -85,13 +87,13 @@ extern void getAStart(double** arcs, int n, double** ans) {
 	deleteAMatrix(temp);
 }
 
-//µÃµ½¸ø¶¨¾ØÕósrcµÄÄæ¾ØÕó±£´æµ½desÖĞ¡£
+//å¾—åˆ°ç»™å®šçŸ©é˜µsrcçš„é€†çŸ©é˜µä¿å­˜åˆ°desä¸­ã€‚
 extern bool GetMatrixInverse(double** src, int n, double** des) {
 	double flag = getA(src, n);
 	double** t = getAMatrix(MYDIM, MYDIM);
 	if (0 == flag) {
-		std::cout << "Ô­¾ØÕóĞĞÁĞÊ½Îª0£¬ÎŞ·¨ÇóÄæ¡£ÇëÖØĞÂÔËĞĞ" << std::endl;
-		return false;//Èç¹ûËã³ö¾ØÕóµÄĞĞÁĞÊ½Îª0£¬Ôò²»ÍùÏÂ½øĞĞ
+		std::cout << "åŸçŸ©é˜µè¡Œåˆ—å¼ä¸º0ï¼Œæ— æ³•æ±‚é€†ã€‚è¯·é‡æ–°è¿è¡Œ" << std::endl;
+		return false;//å¦‚æœç®—å‡ºçŸ©é˜µçš„è¡Œåˆ—å¼ä¸º0ï¼Œåˆ™ä¸å¾€ä¸‹è¿›è¡Œ
 	}
 	else {
 		getAStart(src, n, t);
@@ -108,7 +110,7 @@ extern bool GetMatrixInverse(double** src, int n, double** des) {
 
 
 extern double** getInverse(double** matrix_before) {
-	bool flag;//±êÖ¾Î»£¬Èç¹ûĞĞÁĞÊ½Îª0£¬Ôò½áÊø³ÌĞò
+	bool flag;//æ ‡å¿—ä½ï¼Œå¦‚æœè¡Œåˆ—å¼ä¸º0ï¼Œåˆ™ç»“æŸç¨‹åº
 
 	double **matrix_after = getAMatrix(3, 3);
 	flag = GetMatrixInverse(matrix_before, MYDIM, matrix_after);
