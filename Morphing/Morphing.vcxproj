@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B9ABE0A4-C3F5-4B2E-9812-6BD054C38B26}</ProjectGuid>
+    <RootNamespace>Morphing</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="CImg.h" />
+    <ClInclude Include="Delaunay.h" />
+    <ClInclude Include="dlib\algs.h" />
+    <ClInclude Include="dlib\any.h" />
+    <ClInclude Include="dlib\array.h" />
+    <ClInclude Include="dlib\array2d.h" />
+    <ClInclude Include="dlib\assert.h" />
+    <ClInclude Include="dlib\base64.h" />
+    <ClInclude Include="dlib\bayes_utils.h" />
+    <ClInclude Include="dlib\bigint.h" />
+    <ClInclude Include="dlib\binary_search_tree.h" />
+    <ClInclude Include="dlib\bit_stream.h" />
+    <ClInclude Include="dlib\bound_function_pointer.h" />
+    <ClInclude Include="dlib\bridge.h" />
+    <ClInclude Include="dlib\bsp.h" />
+    <ClInclude Include="dlib\byte_orderer.h" />
+    <ClInclude Include="dlib\clustering.h" />
+    <ClInclude Include="dlib\cmd_line_parser.h" />
+    <ClInclude Include="dlib\compress_stream.h" />
+    <ClInclude Include="dlib\conditioning_class.h" />
+    <ClInclude Include="dlib\config.h" />
+    <ClInclude Include="dlib\config_reader.h" />
+    <ClInclude Include="dlib\console_progress_indicator.h" />
+    <ClInclude Include="dlib\control.h" />
+    <ClInclude Include="dlib\cpp_pretty_printer.h" />
+    <ClInclude Include="dlib\cpp_tokenizer.h" />
+    <ClInclude Include="dlib\crc32.h" />
+    <ClInclude Include="dlib\data_io.h" />
+    <ClInclude Include="dlib\directed_graph.h" />
+    <ClInclude Include="dlib\dir_nav.h" />
+    <ClInclude Include="dlib\disjoint_subsets.h" />
+    <ClInclude Include="dlib\dnn.h" />
+    <ClInclude Include="dlib\enable_if.h" />
+    <ClInclude Include="dlib\entropy_decoder.h" />
+    <ClInclude Include="dlib\entropy_decoder_model.h" />
+    <ClInclude Include="dlib\entropy_encoder.h" />
+    <ClInclude Include="dlib\entropy_encoder_model.h" />
+    <ClInclude Include="dlib\error.h" />
+    <ClInclude Include="dlib\filtering.h" />
+    <ClInclude Include="dlib\float_details.h" />
+    <ClInclude Include="dlib\geometry.h" />
+    <ClInclude Include="dlib\graph.h" />
+    <ClInclude Include="dlib\graph_cuts.h" />
+    <ClInclude Include="dlib\graph_utils.h" />
+    <ClInclude Include="dlib\graph_utils_threaded.h" />
+    <ClInclude Include="dlib\gui_core.h" />
+    <ClInclude Include="dlib\gui_widgets.h" />
+    <ClInclude Include="dlib\hash.h" />
+    <ClInclude Include="dlib\hash_map.h" />
+    <ClInclude Include="dlib\hash_set.h" />
+    <ClInclude Include="dlib\hash_table.h" />
+    <ClInclude Include="dlib\image_io.h" />
+    <ClInclude Include="dlib\image_keypoint.h" />
+    <ClInclude Include="dlib\image_processing.h" />
+    <ClInclude Include="dlib\image_transforms.h" />
+    <ClInclude Include="dlib\iosockstream.h" />
+    <ClInclude Include="dlib\is_kind.h" />
+    <ClInclude Include="dlib\linker.h" />
+    <ClInclude Include="dlib\logger.h" />
+    <ClInclude Include="dlib\lsh.h" />
+    <ClInclude Include="dlib\lz77_buffer.h" />
+    <ClInclude Include="dlib\lzp_buffer.h" />
+    <ClInclude Include="dlib\manifold_regularization.h" />
+    <ClInclude Include="dlib\map.h" />
+    <ClInclude Include="dlib\matrix.h" />
+    <ClInclude Include="dlib\md5.h" />
+    <ClInclude Include="dlib\member_function_pointer.h" />
+    <ClInclude Include="dlib\memory_manager.h" />
+    <ClInclude Include="dlib\memory_manager_global.h" />
+    <ClInclude Include="dlib\memory_manager_stateless.h" />
+    <ClInclude Include="dlib\misc_api.h" />
+    <ClInclude Include="dlib\mlp.h" />
+    <ClInclude Include="dlib\noncopyable.h" />
+    <ClInclude Include="dlib\numerical_integration.h" />
+    <ClInclude Include="dlib\numeric_constants.h" />
+    <ClInclude Include="dlib\opencv.h" />
+    <ClInclude Include="dlib\optimization.h" />
+    <ClInclude Include="dlib\pipe.h" />
+    <ClInclude Include="dlib\pixel.h" />
+    <ClInclude Include="dlib\platform.h" />
+    <ClInclude Include="dlib\python.h" />
+    <ClInclude Include="dlib\quantum_computing.h" />
+    <ClInclude Include="dlib\queue.h" />
+    <ClInclude Include="dlib\rand.h" />
+    <ClInclude Include="dlib\ref.h" />
+    <ClInclude Include="dlib\reference_counter.h" />
+    <ClInclude Include="dlib\revision.h" />
+    <ClInclude Include="dlib\sequence.h" />
+    <ClInclude Include="dlib\serialize.h" />
+    <ClInclude Include="dlib\server.h" />
+    <ClInclude Include="dlib\set.h" />
+    <ClInclude Include="dlib\set_utils.h" />
+    <ClInclude Include="dlib\simd.h" />
+    <ClInclude Include="dlib\sliding_buffer.h" />
+    <ClInclude Include="dlib\smart_pointers.h" />
+    <ClInclude Include="dlib\smart_pointers_thread_safe.h" />
+    <ClInclude Include="dlib\sockets.h" />
+    <ClInclude Include="dlib\sockstreambuf.h" />
+    <ClInclude Include="dlib\sort.h" />
+    <ClInclude Include="dlib\sparse_vector.h" />
+    <ClInclude Include="dlib\sqlite.h" />
+    <ClInclude Include="dlib\stack.h" />
+    <ClInclude Include="dlib\stack_trace.h" />
+    <ClInclude Include="dlib\static_map.h" />
+    <ClInclude Include="dlib\static_set.h" />
+    <ClInclude Include="dlib\statistics.h" />
+    <ClInclude Include="dlib\std_allocator.h" />
+    <ClInclude Include="dlib\stl_checked.h" />
+    <ClInclude Include="dlib\string.h" />
+    <ClInclude Include="dlib\svm.h" />
+    <ClInclude Include="dlib\svm_threaded.h" />
+    <ClInclude Include="dlib\sync_extension.h" />
+    <ClInclude Include="dlib\threads.h" />
+    <ClInclude Include="dlib\timeout.h" />
+    <ClInclude Include="dlib\timer.h" />
+    <ClInclude Include="dlib\time_this.h" />
+    <ClInclude Include="dlib\timing.h" />
+    <ClInclude Include="dlib\tokenizer.h" />
+    <ClInclude Include="dlib\tuple.h" />
+    <ClInclude Include="dlib\type_safe_union.h" />
+    <ClInclude Include="dlib\uintn.h" />
+    <ClInclude Include="dlib\unicode.h" />
+    <ClInclude Include="dlib\unordered_pair.h" />
+    <ClInclude Include="dlib\vectorstream.h" />
+    <ClInclude Include="dlib\windows_magic.h" />
+    <ClInclude Include="dlib\xml_parser.h" />
+    <ClInclude Include="Morphing.h" />
+    <ClInclude Include="MyMatrix.h" />
+    <ClInclude Include="Point.h" />
+    <ClInclude Include="resource.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Delaunay.cpp" />
+    <ClCompile Include="dlib\all\source.cpp" />
+    <ClCompile Include="dlib\all_console.cpp" />
+    <ClCompile Include="dlib\all_gui.cpp" />
+    <ClCompile Include="dlib\stack_trace.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Morphing.cpp" />
+    <ClCompile Include="Point.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dlib\cassert" />
+    <None Include="dlib\cmake" />
+    <None Include="dlib\config.h.in" />
+    <None Include="dlib\cstring" />
+    <None Include="dlib\fstream" />
+    <None Include="dlib\iomanip" />
+    <None Include="dlib\iosfwd" />
+    <None Include="dlib\iostream" />
+    <None Include="dlib\istream" />
+    <None Include="dlib\locale" />
+    <None Include="dlib\ostream" />
+    <None Include="dlib\revision.h.in" />
+    <None Include="dlib\sstream" />
+    <None Include="shape_predictor_68_face_landmarks.dat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="dlib\CMakeLists.txt" />
+    <Text Include="dlib\dlib_basic_cpp_build_tutorial.txt" />
+    <Text Include="dlib\dlib_include_path_tutorial.txt" />
+    <Text Include="dlib\LICENSE.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Morphing.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
